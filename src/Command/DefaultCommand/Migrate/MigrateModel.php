@@ -12,6 +12,17 @@ namespace EasySwoole\EasySwoole\Command\DefaultCommand\Migrate;
 abstract class MigrateModel
 {
     /**
+     * MigrateModel constructor.
+     * @param array ...$connect
+     */
+    public function __construct(...$connect)
+    {
+        $this->table();
+        $this->primaryKey();
+        $this->bean();
+    }
+
+    /**
      * 数据表名称
      * @var string
      */
