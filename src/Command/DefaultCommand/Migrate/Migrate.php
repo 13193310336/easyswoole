@@ -161,7 +161,7 @@ class Migrate implements CommandInterface
                 $string .= 'UNIQUE INDEX `' . $field . '_UNIQUE' . '` (`' . $field . '`) USING ' . strtoupper($attributes['indexMethod']) . ',';
             }
             if (strtoupper($attributes['indexType']) == 'FULLTEXT') {
-                $string .= 'FULLTEXT INDEX `' . $field . '_FULLTEXT' . '` (`' . $field . '`) USING ' . strtoupper($attributes['indexMethod']) . ',';
+                $string .= 'FULLTEXT INDEX `' . $field . '_FULLTEXT' . '` (`' . $field . '`),';
             }
         }
 
